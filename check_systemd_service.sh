@@ -14,9 +14,11 @@
 # You should have received a copy of the GNU General Public License along with
 # this program. If not, see <http://www.gnu.org/licenses/>.
 
-
-PLUGINDIR=$(dirname $0)
-. $PLUGINDIR/utils.sh
+STATE_OK=0
+STATE_WARNING=1
+STATE_CRITICAL=2
+STATE_UNKNOWN=3
+STATE_DEPENDENT=4
 
 
 if [ $# -ne 1 ]; then
